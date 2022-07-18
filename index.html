@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Movie Search Site</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h2>Movie App</h2>
+    </header>
+    <section>
+      <div class="searchBar">
+        <b>Search</b>
+        <form name="formSearchMovie">
+          <label for="searchKey"
+            >Movie Title<span class="requiredText">*</span></label
+          ><input type="text" id="searchKey" name="searchKey" value="" /><span
+            id="searchKeyErr"
+            class="errorShow"
+          ></span
+          ><br />
+          <br />
+          <label for="searchYear">Year:</label
+          ><input type="text" id="searchYear" name="searchYear" value="" /><span
+            id="searchYearErr"
+            class="errorShow"
+          ></span
+          ><br />
+          <br />
+          <label for="searchPlot"
+            >Plot:<span class="requiredText">*</span> </label
+          ><input type="radio" name="plot" value="short" /><label for="short"
+            >Short</label
+          >
+          <input type="radio" name="plot" value="full" /><label for="long"
+            >Long</label
+          >
+          <span id="plotErr" class="errorShow"></span><br />
+          <br />
+
+          <input type="button" onclick="validateForm()" value="Search" />
+        </form>
+        <br />
+        <br />
+      </div>
+    </section>
+    <section>
+      <br />
+      <br />
+    </section>
+    <section class="contentResult">
+      <div>Movie Details</div>
+      <div id="result" class="contentResultWidth"></div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
